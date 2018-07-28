@@ -1,0 +1,69 @@
+.slideShow3 {
+    width: 96%;
+    margin: 0 auto;
+}
+.slideShow3-slide {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display:none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+55,000000+100&0.65+0,0+100;Neutral+Density */
+    /*background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.29) 55%, rgba(0,0,0,0) 100%); !* FF3.6-15 *!*/
+    /*background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.29) 55%,rgba(0,0,0,0) 100%); !* Chrome10-25,Safari5.1-6 *!*/
+    /*background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.29) 55%,rgba(0,0,0,0) 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); !* IE6-9 *!*/
+}
+.slideShow3-fade {
+    /* css3 animation */
+    -webkit-animation-name: slideShow3-anim;
+    -webkit-animation-duration: 3.0s;
+    -webkit-animation-timing-function: linear;
+    /*-webkit-animation-iteration-count: infinite;*/
+    -webkit-animation-direction: normal;
+    /*-webkit-animation-delay: 0;*/
+    /*-webkit-animation-play-state: running;*/
+    /*-webkit-animation-fill-mode: forwards;*/
+
+    -moz-animation-name: slideShow3-anim;
+    -moz-animation-duration: 3.0s;
+    -moz-animation-timing-function: linear;
+    /*-moz-animation-iteration-count: infinite;*/
+    -moz-animation-direction: normal;
+    /*-moz-animation-delay: 0;*/
+    /*-moz-animation-play-state: running;*/
+    /*-moz-animation-fill-mode: forwards;*/
+}
+.slideShow3-abstract {
+    position: absolute;
+    background-color: transparent;
+    opacity: 1;
+    color: white;
+}
+/* keyframes #anim_slides */
+@-webkit-keyframes slideShow3-anim {
+    0% {
+        opacity:0.4;
+    }
+    /*6% {*/
+        /*opacity:1;*/
+    /*}*/
+    /*24% {*/
+        /*opacity:1;*/
+    /*}*/
+    /*30% {*/
+        /*opacity:0;*/
+    /*}*/
+    100% {
+        opacity:1;
+    }
+}
+@-moz-keyframes slideShow3-anim {
+    0% {
+        opacity:0.4;
+    }
+    100% {
+        opacity:1;
+    }
+}

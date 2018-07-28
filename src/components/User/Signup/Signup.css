@@ -1,0 +1,21 @@
+.signupWidth {
+    width: 60%;
+}
+
+@media only screen and (max-width: 768px) {
+    .signupWidth {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .signupWidth {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .signupWidth {
+        width: 95%;
+    }
+}
