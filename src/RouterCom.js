@@ -12,6 +12,8 @@ import AdminLogIn from './components/AdminControlPanel/AdminLogIn/AdminLogIn';
 import ContentManagerPanel from './components/ContentManagerPanel/ContentManagerPanel';
 import ContentManagerLogin from './components/ContentManagerPanel/ContentManagerLogin/ContentManagerLogin';
 import Signup from './components/User/Signup/Signup';
+import Cart from './components/Cart/Cart';
+import GoogleRegPass from './components/User/GoogleRegPass/GoogleRegPass';
 import ContentDetail from './components/Content/ContentDetail/ContentDetail';
 import Forum from './components/Forum/Forum';
 import Tutorials from './components/Tutorials/Tutorials';
@@ -47,9 +49,11 @@ class RouterCom extends Component {
             <main>
                 <Alert stack={{limit: 3}} />
              <Switch>
+                <Route path="/google/:token" component={GoogleRegPass}/>
                 <Route path="/online-conversion-calculator" component={Conversions}/>
                 <Route path="/AdminLogIn" component={AdminLogIn}/>
                 <Route path="/ContentManagerLogin" component={ContentManagerLogin}/>
+                 <Route path="/cart" component={Cart}/>
                 <Route path="/Signup" component={Signup}/>
                 <Route path="/Login" component={Login}/>
                 <Route path="/Logout" component={Logout}/>
@@ -57,7 +61,7 @@ class RouterCom extends Component {
                 <Route path="/Articles" component={Main}/>
                 <Route path="/Forum" component={Forum}/>
                 <Route path="/Tutorials" component={Tutorials}/>
-                 <Route path="/search/:category/:keyword" component={showSearchProductResult}/>
+                <Route path="/search/:category/:keyword" component={showSearchProductResult}/>
                 <Route path="/search/:category/:keyword/:filter" component={showSearchProductResult}/>
                 <Route path="/products/:category1" component={ComponentDetailList}/>
                 <Route path="/products/:category1/:category2/:category3" component={ComponentDetailList}/>

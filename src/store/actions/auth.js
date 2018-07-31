@@ -48,7 +48,6 @@ export const auth = (email, password,url) => {
 
         axios.post(url, authData)
             .then((response) => {
-                console.log(response);
                 if(response.data != 404)
                 {
                     // response.data.expiresIn
@@ -68,6 +67,26 @@ export const auth = (email, password,url) => {
                 console.log(err);
                 dispatch(authFail('دوباره امتحان کنید'));
             });
+    };
+};
+
+
+export const authGoogle = (response) => {
+    return dispatch => {
+                if(response.data != 404)
+                {
+                    console.log("authGoogle");console.log(response);
+                    // response.data.expiresIn
+                    const expirationDate = new Date(new Date().getTime() +  10000* 1000);
+                    localStorage.setItem('expirationDate', expirationDate);
+                    localStorage.setItem('token', response.data.token);
+                    localStorage.setItem('userData', JSON.stringify(response.data.userData));
+                    dispatch(authSuccess(response.data.token,response.data.userData));
+                    dispatch(checkAuthTimeout(10000));
+                } else {
+                    console.log("Erorr");
+                    dispatch(authFail('ایمیل یا رمز خود را اشتباه وارد کرده اید'));
+                }
     };
 };
 

@@ -54,6 +54,7 @@ class HeaderTop extends Component {
                 authLinks = (
                     <div className="flex-row flex-item-3 auth">
                        <Link hidden={this.state.loggingOut}  to="/Logout" onClick={this.LogOutHandler}>خروج</Link>
+                       <Link hidden={this.state.loggingOut} to="/cart">سبد خرید</Link>
                        <ClipLoader color={'#123abc'} loading={this.state.loggingOut} />
                     </div>
                 );
@@ -62,6 +63,7 @@ class HeaderTop extends Component {
                 <div className="flex-row flex-item-3 auth">
                     <Link to="/Signup">ثبت نام</Link>
                     <Link to="/Login">ورود</Link>
+                    <Link to="/cart">سبد خرید</Link>
                 </div>
             );
         }

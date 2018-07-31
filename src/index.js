@@ -8,13 +8,14 @@ import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import registerServiceWorker from './registerServiceWorker';
 import authReducer from './store/reducers/auth';
+import cartReducer from './store/reducers/cart';
 import * as actions from './store/actions/index';
 import RouterCom from './RouterCom';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-    auth: authReducer
+    auth: authReducer, cart: cartReducer
 });
 
 const store = createStore(rootReducer, composeEnhancers(
