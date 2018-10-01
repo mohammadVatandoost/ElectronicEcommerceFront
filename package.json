@@ -1,0 +1,29 @@
+{
+  "name": "ariaelec",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "build-url": "^1.1.2",
+    "history": "^4.7.2",
+    "react": "^16.4.2",
+    "react-autosuggest": "^9.3.4",
+    "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-s-alert": "^1.4.1",
+    "react-scripts": "1.1.4",
+    "react-select": "^2.0.0",
+    "react-spinners": "^0.3.3",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "validator": "^10.5.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
